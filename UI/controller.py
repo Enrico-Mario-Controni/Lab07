@@ -42,15 +42,23 @@ class Controller:
     # CALLBACKS DROPDOWN
     # TODO
     def callbacks_museo(self,e):
-        self.museo_selezionato = e.control.value
-        print(self.museo_selezionato)
-        return self.museo_selezionato
+        if e.control.value == "0":
+            self.museo_selezionato = None
+            return self.museo_selezionato
+        else:
+            self.museo_selezionato = e.control.value
+            print(self.museo_selezionato)
+            return self.museo_selezionato
 
 
     def callbacks_epoca(self,e):
-        self.epoca_selezionata = e.control.value
-        print(self.epoca_selezionata)
-        return self.epoca_selezionata
+        if e.control.value == "Null":
+            self.epoca_selezionata=None
+            return self.epoca_selezionata
+        else:
+            self.epoca_selezionata = e.control.value
+            print(self.epoca_selezionata)
+            return self.epoca_selezionata
 
 
     # AZIONE: MOSTRA ARTEFATTI
